@@ -8,6 +8,7 @@ int main()
 	unsigned int ui;
 
 	uint64_t start_cycles = __rdtscp(&ui);
+	//Reads the current value of the processor’s time-stamp counter (a 64-bit MSR) into the EDX:EAX registers.
 
 	int sum = 0;
 	volatile int sink = 0;
