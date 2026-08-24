@@ -6,7 +6,7 @@
 #    By: elsikira <elsikira@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/08/22 16:39:44 by elsikira          #+#    #+#              #
-#    Updated: 2026/08/22 16:50:06 by elsikira         ###   ########.fr        #
+#    Updated: 2026/08/24 12:11:57 by elsikira         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,13 +27,12 @@ $(NAME):	$(OBJS)
 %.o:		%.cpp
 			$(CXX) $(CXXFLAGS) -c $< -o $@
 
-clan:
+clean:
 			rm -f $(OBJS)
 
-fclean:
-			clean
+fclean:		clean
 			rm -f $(NAME)
 
 re:			fclean all
 
-.PHONY: all clean fclean re
+.PHONY:		all clean fclean re
